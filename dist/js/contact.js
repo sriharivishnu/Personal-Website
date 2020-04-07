@@ -11,7 +11,12 @@ function submitForm(e) {
     let email = getInputVal('email');
     let message = getInputVal('message');
     
-    writeUserData(name, email, message);
+    if (name == "" || email == "" || message == "") {
+        showAlert("Please fill out all fields", true);
+    }
+    else {
+        writeUserData(name, email, message);
+    }
     
 }
 
@@ -27,17 +32,27 @@ function writeUserData (name, email, message) {
         Message: message
     }, function(error) {
         if (error) {
-            document.querySelector('.alert').style.background = '#f22e2e';
+            showAlert("An Error has occurred. Message did not send.", error);
         }
         else {
-            document.querySelector('.alert').style.background = '#79c879';
+            showAlert("Your message has been sent")
+            document.getElementById('contact-form').reset();
         }
     });
+}
 
-    document.querySelector('.alert').style.display = 'block';
-
+function showAlert(message, error) {
+    let alert = document.querySelector('.alert');
+    if (error) {
+        alert.style.background = '#f22e2e';
+        alert.textContent = message;
+    }
+    else {
+        alert.style.background = '#79c879';
+        alert.textContent = message;
+    }
+    alert.style.display = 'block';
     setTimeout(function() {
-        document.querySelector('.alert').style.display = 'none';
+        alert.style.display = 'none';
     }, 3000);
-    document.getElementById('contact-form').reset();
 }

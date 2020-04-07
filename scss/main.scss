@@ -110,6 +110,13 @@ main {
             }
         }
     }
+
+    &#notfound {
+        text-align: center;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
 }
 
 // Home
@@ -370,6 +377,21 @@ main {
     background: darken($primary-color, 10);
     color: set-text-color($primary-color);
     height: 60px;
+}
+
+.go-home {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 10px;
+    &:hover {
+        background-color: $tertiary-color;
+        color: #ffffff;
+    }
 }
 
 //Animations 

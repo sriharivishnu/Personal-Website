@@ -179,6 +179,10 @@ main {
       main#resume div .contact:hover {
         background: #52525275;
         color: white; }
+  main#notfound {
+    text-align: center; }
+    main#notfound h1 {
+      margin-top: 20vh; }
 
 .text-type > .txt-cursor {
   border-right: 0.2rem solid #dfd9d9; }
@@ -369,6 +373,19 @@ main {
   background: #1b1e2a;
   color: #ffffff;
   height: 60px; }
+
+.go-home {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  background-color: #dfe955;
+  color: #2f3449;
+  border-radius: 10px; }
+  .go-home:hover {
+    background-color: #52525275;
+    color: #ffffff; }
 
 @keyframes slideFromRight {
   from {
