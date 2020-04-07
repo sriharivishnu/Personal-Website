@@ -124,7 +124,7 @@ main {
     margin: auto;
     border: $secondary-color 3px solid;
     border-radius: 50%;
-    background: url('/dist/img/srihariv_photo_small.png');
+    background: url('../img/srihariv_photo_small.png');
     background-size: cover;
     background-position: -20px 0px;
     animation-name: appear;
@@ -300,13 +300,9 @@ main {
             outline: none;
             background-color: #f4f4f4;
             
-            &:focus {
-                box-shadow: red;
-            }
         }
         input {
             width: 30vw;
-            
         }
         textarea {
             width: 30vw;

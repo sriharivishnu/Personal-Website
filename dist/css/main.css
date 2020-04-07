@@ -73,7 +73,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("/dist/img/srihariv_photo_small.png");
+      background: url("../img/srihariv_photo_small.png");
       background-size: cover;
       background-position: -20px 0px;
       background-repeat: no-repeat;
@@ -103,7 +103,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(/dist/img/showcase.jpg);
+    background: url(../img/showcase.jpg);
     background-repeat: no-repeat;
     background-size: inherit; }
     body#bg-img:after {
@@ -189,7 +189,7 @@ main {
   margin: auto;
   border: #dfe955 3px solid;
   border-radius: 50%;
-  background: url("/dist/img/srihariv_photo_small.png");
+  background: url("../img/srihariv_photo_small.png");
   background-size: cover;
   background-position: -20px 0px;
   animation-name: appear;
@@ -319,8 +319,6 @@ main {
       border-radius: 5px;
       outline: none;
       background-color: #f4f4f4; }
-      .contact-form .form-group input:focus, .contact-form .form-group textarea:focus {
-        box-shadow: red; }
     .contact-form .form-group input {
       width: 30vw; }
     .contact-form .form-group textarea {
@@ -437,6 +435,14 @@ main {
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
+  .form-group {
+    width: 100%; }
+    .form-group input[type="text"] {
+      width: 100%; }
+    .form-group input[type="email"] {
+      width: 100%; }
+    .form-group textarea[name="message"] {
+      width: 100%; }
   .profile-pic {
     width: 40vw;
     height: 40vw; }

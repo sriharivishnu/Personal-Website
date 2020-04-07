@@ -2,7 +2,7 @@ $primary-color: rgb(47, 52, 73);
 $secondary-color: #dfe955;
 $tertiary-color: #52525275;
 $show-home-image: true;
-$home-image: url(/dist/img/showcase.jpg);
+$home-image: url(../img/showcase.jpg);
 $background-opacity: 0.7;
 
 @mixin easeOut {
