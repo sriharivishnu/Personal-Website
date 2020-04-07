@@ -294,46 +294,57 @@ main {
         color: #000000; }
 
 .contact-form {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-content: center;
   animation-name: slideFromBottom;
-  animation-duration: 2s; }
+  animation-duration: 2s;
+  text-align: center;
+  margin: auto;
+  width: 30vw; }
   .contact-form .separate {
     background-color: #252939;
-    text-align: center;
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    width: 100%;
+    margin: auto; }
   .contact-form .form-group {
+    margin: auto;
+    width: 100%;
     margin-top: 0.5rem;
     display: block;
     padding: 0.5rem 1rem 1rem 1rem;
     background-color: #52525275; }
     .contact-form .form-group label {
       display: block;
-      margin-bottom: 0.2rem; }
+      margin-bottom: 0.2rem;
+      text-align: left; }
     .contact-form .form-group input, .contact-form .form-group textarea {
+      width: 100%;
       font-size: 1rem;
       padding: 0.5rem;
       border: 0;
       border-radius: 5px;
       outline: none;
       background-color: #f4f4f4; }
-    .contact-form .form-group input {
-      width: 30vw; }
     .contact-form .form-group textarea {
-      width: 30vw;
       height: 20vh; }
   .contact-form input[type="submit"] {
+    width: 100%;
     border: 0;
     padding: 1rem 1.5rem;
     margin-top: 0.5rem;
     font-size: 1rem;
     background: #dfe955;
+    text-transform: uppercase;
     cursor: pointer; }
     .contact-form input[type="submit"]:hover {
       background: #52525275;
       color: white; }
+  .contact-form .alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-top: 0.5rem;
+    display: none; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -387,11 +398,15 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .contact-form {
+    width: 30vw; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .contact-form {
+    width: 40vw; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -425,7 +440,9 @@ main {
   .projects {
     grid-template-columns: repeat(2, 1fr); }
     .projects img {
-      height: 30vw; } }
+      height: 30vw; }
+  .contact-form {
+    width: 70vw; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -435,14 +452,8 @@ main {
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
-  .form-group {
-    width: 100%; }
-    .form-group input[type="text"] {
-      width: 100%; }
-    .form-group input[type="email"] {
-      width: 100%; }
-    .form-group textarea[name="message"] {
-      width: 100%; }
+  .contact-form {
+    width: 90vw; }
   .profile-pic {
     width: 40vw;
     height: 40vw; }

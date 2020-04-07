@@ -3,12 +3,18 @@
     .projects {
         grid-template-columns: repeat(3,1fr);
     }
+    .contact-form {
+        width: 30vw;
+    }
 }
 
 // Laptops
 @include mediaLg {
     .projects {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .contact-form {
+        width: 40vw;
     }
 }
 
@@ -74,6 +80,10 @@
         }
     }
 
+    .contact-form {
+        width: 70vw;
+    }
+
 }
 
 // Smartphones
@@ -88,21 +98,9 @@
             font-size: 5rem;
         }
     }
-
-    .form-group {
-        width: 100%;
-
-        input[type="text"] {
-            width: 100%;
-        }
-        input[type="email"] {
-            width: 100%;
-        }
-        textarea[name="message"] {
-            width: 100%;
-        }
+    .contact-form {
+        width: 90vw;
     }
-
     .profile-pic {
         width: 40vw;
         height: 40vw;

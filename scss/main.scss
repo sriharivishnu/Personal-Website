@@ -270,20 +270,21 @@ main {
 }
 
 .contact-form {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
     animation-name: slideFromBottom;
     animation-duration: 2s;
+    text-align: center;
+    margin: auto;
+    width: 30vw;
+    
     .separate {
         background-color: darken($primary-color, 5);
-        text-align: center;
         padding: 0.5rem;
-    }
-    .contact-header {
+        width: 100%;
+        margin: auto;
     }
     .form-group {
+        margin: auto;
+        width: 100%;
         margin-top: 0.5rem;
         display: block;
         padding: 0.5rem 1rem 1rem 1rem;
@@ -291,8 +292,10 @@ main {
         label {
             display: block;
             margin-bottom: 0.2rem;
+            text-align: left;
         }
         input, textarea {
+            width: 100%;
             font-size: 1rem;
             padding: 0.5rem;
             border:0;
@@ -301,21 +304,20 @@ main {
             background-color: #f4f4f4;
             
         }
-        input {
-            width: 30vw;
-        }
+
         textarea {
-            width: 30vw;
             height: 20vh;
         }
     }
 
     input[type="submit"] {
+        width: 100%;
         border:0;
         padding: 1rem 1.5rem;
         margin-top: 0.5rem;
         font-size: 1rem;
         background: $secondary-color;
+        text-transform: uppercase;
         
         cursor: pointer;
 
@@ -323,6 +325,16 @@ main {
             background: $tertiary-color;
             color: white;
         }
+    }
+
+    .alert {
+        text-align: center;
+        padding:10px;
+        background: #79c879;
+        color: #ffffff;
+        margin-bottom: 10px;
+        margin-top: 0.5rem;
+        display: none;
     }
 }
 
