@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.7s ease-out; }
+  transition: all 0.6s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #ffffff;
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -39,15 +39,15 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: rgba(37, 41, 57, 0.9);
+    background: rgba(29, 69, 169, 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -61,12 +61,12 @@
     font-weight: 300;
     color: #ffffff;
     text-decoration: none;
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
       color: #dfe955; }
   .menu-branding {
-    background: rgba(47, 52, 73, 0.9);
-    transition: all 0.7s ease-out;
+    background: rgba(33, 78, 191, 0.9);
+    transition: all 0.6s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -96,35 +96,45 @@
   box-sizing: border-box; }
 
 body {
-  background: #2f3449;
+  background: #214ebf;
   color: #ffffff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/showcase.jpg);
     background-repeat: no-repeat;
     background-size: inherit; }
     body#bg-img:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(47, 52, 73, 0.7);
+      background: rgba(33, 78, 191, 0.6);
       z-index: -1; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
     font-size: 6rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
-    margin-bottom: 2 rem;
-    padding: 0.2rem 1 rem;
-    background: rgba(51, 56, 79, 0.5); }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+    color: #4d4b4b;
+    background: rgba(255, 255, 255, 0.8); }
 
 a {
   color: white;
@@ -146,26 +156,46 @@ main {
     animation-name: slideContact;
     animation-duration: 2s; }
     main .icons a {
+      color: #ffffff;
       padding: 0.4rem; }
       main .icons a:hover {
         color: #dfe955;
-        transition: all 0.7s ease-out; }
+        transition: all 0.6s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 15vh;
+      text-align: center; }
+    main#home .extras {
+      text-align: center;
+      margin-top: 5rem; }
     main#home .contact-me-btn {
       animation-name: slideContact;
-      animation-duration: 2s;
+      animation-duration: 1.5s;
       display: inline-block;
       margin-top: 1rem;
-      background: rgba(57, 57, 57, 0.458824);
+      background: rgba(51, 51, 51, 0.458824);
       padding: 0.7rem 1rem;
       border-radius: 10px;
-      transition: all 0.7s ease-out; }
+      transition: all 0.6s ease-out; }
       main#home .contact-me-btn:hover {
         background: #dbe63e;
         color: #000000; }
+    main#home .learn-more {
+      animation-duration: 1s;
+      border-radius: 10px;
+      margin: 1rem auto auto auto;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+      font-size: medium;
+      opacity: 0.85;
+      outline: none;
+      cursor: pointer;
+      color: #000000;
+      background-color: #dfe955;
+      transition: all 0.6s ease-out; }
+      main#home .learn-more:hover {
+        opacity: 1;
+        background: #dbe63e; }
   main#resume {
     text-align: center; }
     main#resume div .contact {
@@ -175,7 +205,7 @@ main {
       margin-top: 1.5rem;
       background: #dfe955;
       color: black;
-      transition: all 0.7s ease-out; }
+      transition: all 0.6s ease-out; }
       main#resume div .contact:hover {
         background: #52525275;
         color: white; }
@@ -185,7 +215,7 @@ main {
       margin-top: 20vh; }
 
 .text-type > .txt-cursor {
-  border-right: 0.2rem solid #dfd9d9; }
+  border-right: 0.2rem solid darkgray; }
 
 .profile-pic {
   width: 20vw;
@@ -204,7 +234,7 @@ main {
   grid-gap: 30px;
   margin-top: 2vh;
   text-align: left;
-  grid-template-areas: 'profile-pic bio bio' 'head head head' 'job1 job2 job3';
+  grid-template-areas: "profile-pic bio bio" "head head head" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio {
     grid-area: bio;
@@ -219,9 +249,9 @@ main {
       background: #dfe955;
       margin-top: 3rem;
       font-size: 1.2rem;
-      color: #2f3449;
+      color: #214ebf;
       border-radius: 12px;
-      transition: all 0.7s ease-out; }
+      transition: all 0.6s ease-out; }
       .about-info .bio .resume-button:hover {
         background: #52525275;
         color: white; }
@@ -248,7 +278,7 @@ main {
 .pdf-viewer {
   width: 80vw;
   height: 100vh;
-  background: #2f3449;
+  background: #214ebf;
   border: 0; }
 
 .projects {
@@ -262,13 +292,13 @@ main {
     animation-name: appear;
     animation-duration: 1s; }
   .projects .description {
-    background: #252939;
+    background: #1d45a9;
     border-top: #dfe955 5px solid;
     padding: 1.5rem; }
   .projects img {
     height: 25vw;
     width: 100%;
-    border: 5px #1b1e2a solid; }
+    border: 5px #193c94 solid; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #dfe955; }
@@ -289,7 +319,7 @@ main {
     border: 3px #ffffff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    transition: all 0.7s ease-out; }
+    transition: all 0.6s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #dfe955;
@@ -304,7 +334,7 @@ main {
   margin: auto;
   width: 30vw; }
   .contact-form .separate {
-    background-color: #252939;
+    background-color: #1d45a9;
     padding: 0.5rem;
     width: 100%;
     margin: auto; }
@@ -319,7 +349,8 @@ main {
       display: block;
       margin-bottom: 0.2rem;
       text-align: left; }
-    .contact-form .form-group input, .contact-form .form-group textarea {
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
       width: 100%;
       font-size: 1rem;
       padding: 0.5rem;
@@ -354,13 +385,14 @@ main {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem; }
+  margin-bottom: 0.3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background-color: #dfe955;
     color: #000000; }
 
 .btn-dark {
-  background: #11131a;
+  background: #16337e;
   color: #fff; }
 
 .btn-light {
@@ -370,7 +402,7 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #1b1e2a;
+  background: #193c94;
   color: #ffffff;
   height: 60px; }
 
@@ -381,7 +413,7 @@ main {
   width: 200px;
   margin: auto;
   background-color: #dfe955;
-  color: #2f3449;
+  color: #214ebf;
   border-radius: 10px; }
   .go-home:hover {
     background-color: #52525275;
