@@ -1,436 +1,462 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    @include background();
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    height: 100%;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+  @include background();
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
 // Headings
-h1,h2,h3 {
-    margin: 0;
-    font-weight: 400;
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
 
-    &.lg-heading {
-        font-size: 6rem;
-    }
+  &.lg-heading {
+    font-size: 6rem;
+  }
 
-    &.sm-heading {
-        margin-bottom: 2 rem;;
-        padding: 0.2rem 1 rem;
-        background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
-    }
+  &.sm-heading {
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+    color: rgb(77, 75, 75);
+    background: rgba(lighten($color: white, $amount: 2), 0.8);
+  }
 }
 
 //Links
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-// Header 
+// Header
 
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 .text-secondary {
-    color: $secondary-color;
+  color: $secondary-color;
 }
 
 main {
-    padding: 4rem;
-    // height: 100%;
-    min-height: calc(100vh - 60px);
+  padding: 4rem;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
 
-    .icons {
-        margin-top: 1rem;
-        animation-name: slideContact;
-        animation-duration: 2s;
-        a {
-            padding: 0.4rem;
-            &:hover {
-                color: $secondary-color;
-                @include easeOut();
-            }
-        }
+  .icons {
+    margin-top: 1rem;
+    animation-name: slideContact;
+    animation-duration: 2s;
+    a {
+      color: set-text-color($primary-color);
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
     }
+  }
 
-    &#home {
-        overflow: hidden;
-        h1 {
-            margin-top: 20vh;
-        }
-
-        .contact-me-btn {
-            animation-name: slideContact;
-            animation-duration: 2s;
-            display: inline-block;
-            margin-top: 1rem;
-            background: darken($tertiary-color,10);
-            padding: 0.7rem 1rem;
-            border-radius: 10px;
-            @include easeOut;
-
-            &:hover {
-                background: darken($secondary-color, 5);
-                color: set-text-color($secondary-color);
-            }
-        }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 15vh;
+      text-align: center;
     }
-
-    &#resume {
-        text-align: center;
-        div {
-            
-            .contact {
-                display: inline-block;
-                padding: 1.5rem 3rem;
-                border-radius: 10%;
-                margin-top: 1.5rem;
-                background: $secondary-color;
-                color: black;
-                @include easeOut;
-
-                &:hover {
-                    background: $tertiary-color;
-                    color: white;
-                }
-            }
-        }
+    .extras {
+      text-align: center;
+      margin-top: 5rem;
     }
+    .contact-me-btn {
+      animation-name: slideContact;
+      animation-duration: 1.5s;
+      display: inline-block;
+      margin-top: 1rem;
+      background: darken($tertiary-color, 12);
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      @include easeOut;
 
-    &#notfound {
-        text-align: center;
-        h1 {
-            margin-top: 20vh;
-        }
+      &:hover {
+        background: darken($secondary-color, 5);
+        color: set-text-color($secondary-color);
+      }
     }
+    .learn-more {
+      animation-duration: 1s;
+      border-radius: 10px;
+      margin: 1rem auto auto auto;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+      font-size: medium;
+      opacity: 0.85;
+      outline: none;
+      cursor: pointer;
+      color: set-text-color($secondary-color);
+      background-color: $secondary-color;
+      @include easeOut;
+      &:hover {
+        opacity: 1;
+        background: darken($secondary-color, 5);
+      }
+    }
+  }
+
+  &#resume {
+    text-align: center;
+    div {
+      .contact {
+        display: inline-block;
+        padding: 1.5rem 3rem;
+        border-radius: 10%;
+        margin-top: 1.5rem;
+        background: $secondary-color;
+        color: black;
+        @include easeOut;
+
+        &:hover {
+          background: $tertiary-color;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &#notfound {
+    text-align: center;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }
 
 // Home
 .text-type > .txt-cursor {
-    border-right: 0.2rem solid #dfd9d9;
+  border-right: 0.2rem solid darkgray;
 }
 
 //About Page
 .profile-pic {
-    width: 20vw;
-    height: 20vw;
-    margin: auto;
-    border: $secondary-color 3px solid;
-    border-radius: 50%;
-    background: url('../img/srihariv_photo_small.png');
-    background-size: cover;
-    background-position: -20px 0px;
-    animation-name: appear;
-    animation-duration: 1s;
+  width: 20vw;
+  height: 20vw;
+  margin: auto;
+  border: $secondary-color 3px solid;
+  border-radius: 50%;
+  background: url("../img/srihariv_photo_small.png");
+  background-size: cover;
+  background-position: -20px 0px;
+  animation-name: appear;
+  animation-duration: 1s;
 }
 
 .about-info {
-    display: grid;
-    grid-gap: 30px;
-    margin-top: 2vh;
-    text-align: left;
-    grid-template-areas: 
-    'profile-pic bio bio'
-    'head head head'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 30px;
+  margin-top: 2vh;
+  text-align: left;
+  grid-template-areas:
+    "profile-pic bio bio"
+    "head head head"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
 
-    .bio {
-        grid-area: bio;
-        font-size: 1.4rem;
-        animation-name: appear;
-        animation-duration: 1s;
-        div {
-            text-align: center;
-        }
-        .resume-button {
-            padding: 0.7rem 3rem;
-            object-position: 50%;
-            background: $secondary-color;
-            margin-top: 3rem;
-            font-size: 1.2rem;
-            color: $primary-color;
-            border-radius: 12px;
-            @include easeOut;
+  .bio {
+    grid-area: bio;
+    font-size: 1.4rem;
+    animation-name: appear;
+    animation-duration: 1s;
+    div {
+      text-align: center;
+    }
+    .resume-button {
+      padding: 0.7rem 3rem;
+      object-position: 50%;
+      background: $secondary-color;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      color: $primary-color;
+      border-radius: 12px;
+      @include easeOut;
 
-            &:hover {
-                background: $tertiary-color;
-                color: white;
-            }
-        }
-    }
-
-    #about-header {
-        grid-area: head;
-        text-align: center;
-        font-size: 1.6em;
-        color: $secondary-color;
-        animation-name: appear;
-        animation-duration: 1s;
-    }
-    
-    .job-1 {
-        grid-area: job1;
-    }
-    
-    .job-2 {
-        grid-area: job2;
-    }
-    
-    .job-3 {
-        grid-area: job3;
-    }
-    
-    .job {
+      &:hover {
         background: $tertiary-color;
-        padding: 0.5rem;
-        border-bottom: $secondary-color 5px solid;
-        animation-name: slideFromBottom;
-        animation-duration: 1s;
-        
+        color: white;
+      }
     }
+  }
+
+  #about-header {
+    grid-area: head;
+    text-align: center;
+    font-size: 1.6em;
+    color: $secondary-color;
+    animation-name: appear;
+    animation-duration: 1s;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: $tertiary-color;
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+    animation-name: slideFromBottom;
+    animation-duration: 1s;
+  }
 }
 
 // Resume
 .pdf-viewer {
-    width: 80vw;
-    height: 100vh;
-    background: $primary-color;
-    border:0;
+  width: 80vw;
+  height: 100vh;
+  background: $primary-color;
+  border: 0;
 }
 
-// Work Page 
+// Work Page
 
 .projects {
-    margin-top: 5vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.7rem;
-    .item {
-        padding: 1.5rem;
-        background-color: lighten($tertiary-color, 15);
-        animation-name: appear;
-        animation-duration: 1s;
-    }
-    .description {
-        background: darken($primary-color, 5);
-        border-top: $secondary-color 5px solid;
-        padding: 1.5rem;
-    }
-    img {
-        height: 25vw;
-        width: 100%;
-        border: 5px darken($primary-color, 10) solid;
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  .item {
+    padding: 1.5rem;
+    background-color: lighten($tertiary-color, 15);
+    animation-name: appear;
+    animation-duration: 1s;
+  }
+  .description {
+    background: darken($primary-color, 5);
+    border-top: $secondary-color 5px solid;
+    padding: 1.5rem;
+  }
+  img {
+    height: 25vw;
+    width: 100%;
+    border: 5px darken($primary-color, 10) solid;
 
-        &:hover {
-            opacity: 0.5;
-            border-color: $secondary-color;
-        }
-        &.logo {
-            padding: 2rem;
-            background-color: #f4f4f4;
-        }
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
     }
+    &.logo {
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+  }
 }
 
 // Contact Page
 .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
-    animation-name: appear;
-    animation-duration: 1s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  animation-name: appear;
+  animation-duration: 1s;
 
-    div {
-        font-size: 2rem;
-        border: 3px #ffffff solid;
-        padding: 1.5rem 2.5rem;
-        margin-bottom: 3rem;
-        @include easeOut;
-        
-        &:hover {
-            padding: 0.5rem 1.5rem;
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
+  div {
+    font-size: 2rem;
+    border: 3px #ffffff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
 
-            span {
-                color: set-text-color($secondary-color);
-            }
-        }
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
+  }
 }
 
 .contact-form {
-    animation-name: slideFromBottom;
-    animation-duration: 2s;
-    text-align: center;
+  animation-name: slideFromBottom;
+  animation-duration: 2s;
+  text-align: center;
+  margin: auto;
+  width: 30vw;
+
+  .separate {
+    background-color: darken($primary-color, 5);
+    padding: 0.5rem;
+    width: 100%;
     margin: auto;
-    width: 30vw;
-    
-    .separate {
-        background-color: darken($primary-color, 5);
-        padding: 0.5rem;
-        width: 100%;
-        margin: auto;
+  }
+  .form-group {
+    margin: auto;
+    width: 100%;
+    margin-top: 0.5rem;
+    display: block;
+    padding: 0.5rem 1rem 1rem 1rem;
+    background-color: $tertiary-color;
+    label {
+      display: block;
+      margin-bottom: 0.2rem;
+      text-align: left;
     }
-    .form-group {
-        margin: auto;
-        width: 100%;
-        margin-top: 0.5rem;
-        display: block;
-        padding: 0.5rem 1rem 1rem 1rem;
-        background-color: $tertiary-color;
-        label {
-            display: block;
-            margin-bottom: 0.2rem;
-            text-align: left;
-        }
-        input, textarea {
-            width: 100%;
-            font-size: 1rem;
-            padding: 0.5rem;
-            border:0;
-            border-radius: 5px;
-            outline: none;
-            background-color: #f4f4f4;
-            
-        }
-
-        textarea {
-            height: 20vh;
-        }
+    input,
+    textarea {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border: 0;
+      border-radius: 5px;
+      outline: none;
+      background-color: #f4f4f4;
     }
 
-    input[type="submit"] {
-        width: 100%;
-        border:0;
-        padding: 1rem 1.5rem;
-        margin-top: 0.5rem;
-        font-size: 1rem;
-        background: $secondary-color;
-        text-transform: uppercase;
-        
-        cursor: pointer;
-
-        &:hover {
-            background: $tertiary-color;
-            color: white;
-        }
+    textarea {
+      height: 20vh;
     }
+  }
 
-    .alert {
-        text-align: center;
-        padding:10px;
-        background: #79c879;
-        color: #ffffff;
-        margin-bottom: 10px;
-        margin-top: 0.5rem;
-        display: none;
+  input[type="submit"] {
+    width: 100%;
+    border: 0;
+    padding: 1rem 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    background: $secondary-color;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    &:hover {
+      background: $tertiary-color;
+      color: white;
     }
+  }
+
+  .alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-top: 0.5rem;
+    display: none;
+  }
 }
-
-
 
 // Button Styles
 .btn {
-    display: block;
-    padding:0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.3rem;
-    &:hover {
-        background-color: $secondary-color;
-        color:set-text-color($secondary-color);
-    }
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
 }
 
 .btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 15);
-    color: #fff;
+  @extend .btn;
+  background: darken($primary-color, 15);
+  color: #fff;
 }
 
 .btn-light {
-    @extend .btn;
-    background: darken($tertiary-color, 10);
-    color: set-text-color($tertiary-color);
+  @extend .btn;
+  background: darken($tertiary-color, 10);
+  color: set-text-color($tertiary-color);
 }
 
 #main-footer {
-    text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
-    height: 60px;
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
 }
 
 .go-home {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    width: 200px;
-    margin: auto;
-    background-color: $secondary-color;
-    color: $primary-color;
-    border-radius: 10px;
-    &:hover {
-        background-color: $tertiary-color;
-        color: #ffffff;
-    }
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  background-color: $secondary-color;
+  color: $primary-color;
+  border-radius: 10px;
+  &:hover {
+    background-color: $tertiary-color;
+    color: #ffffff;
+  }
 }
 
-//Animations 
+//Animations
 
 @keyframes slideFromRight {
-    from {
-        margin-left: 100%;
-        width: 300%;
-    }
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slideFromBottom {
-    from { 
-        margin-top: 100%;
-    }
-    to {
-        margin-top: 0%;
-    }
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0%;
+  }
 }
 
 @keyframes slideContact {
-    from { 
-        margin-top: 100%;
-    }
-    to {
-        margin-top: 1rem;
-    }
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 1rem;
+  }
 }
 
 @keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@import 'mobile';
+@import "mobile";
