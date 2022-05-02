@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:regular,bold,italic");
+@import './config';
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,7 @@ body {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ebeaea;
+  background-color: $secondary-color;
 }
 
 code {
