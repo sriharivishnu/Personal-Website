@@ -1,104 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="img/Icons/css/all.css" />
-  </head>
-  <body>
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-      </div>
 
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="img/Icons/css/all.css" />
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item current">
+          <a href="about.html" class="nav-link">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="about">
+    <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
+    <div class="about-info">
+      <span class="profile-pic"></span>
+      <div class="bio">
+        <h3 class="text-secondary">BIO</h3>
+        <p>
+          Hi, I'm Sri!
+
+          I'm a Software Engineering (BSE) Student at the University of Waterloo, with experience in Backend, Cloud and
+          Mobile development. I have worked extensively with AWS and have been certified as an AWS Cloud Practitioner. I
+          also have experience with a variety of different languages including Go, C++, Kotlin, and Python as well as
+          technologies such as Docker, Postgres, Rabbit MQ and Android.
+        </p>
+        <div>
+          <a href="resume.html" class="resume-button">Resume</a>
         </div>
-        <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
+      </div>
+      <div id="about-header">Recent Work Experience</div>
+      <div class="job job-1">
+        <h3>TextNow</h3>
+        <div class="job-title">Associate Software Engineer</div>
+        <ul>
+          <li>Proposed and built solution for users to receive customer support via SMS by leveraging ML and NLP to
+            compute sentence similarities; able to respond to 50+ FAQ questions</li>
+          <li>Optimized SQLite database with an LRU in-memory caching layer improving average read performance by 50-75x
           </li>
-          <li class="nav-item current">
-            <a href="about.html" class="nav-link">About Me</a>
+          <li>Designed and implemented a scalable app data migration system affecting 2M+ daily active users</li>
+        </ul>
+      </div>
+      <div class="job job-2">
+        <h3>Dropbase</h3>
+        <div class="job-title">Backend Developer Intern & Contractor</div>
+        <ul>
+          <li>Built service for users to create modular ETL pipelines from 25+ external data sources into Snowflake
           </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">Projects</a>
+          <li>Redesigned CSV upload microservice for scalability, improving upload speeds by 2.6x for gigabytes of
+            data</li>
+          <li>Deployed Rabbit MQ instance (Amazon MQ) and utilized master + worker node architecture to process files
           </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact Me</a>
+          <li>Worked closely with CTO to design architecture on AWS and represented the company with external vendors
           </li>
         </ul>
-      </nav>
-    </header>
-    <main id="about">
-      <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
-      <h2 class="sm-heading">Here's a bit about me:</h2>
-      <div class="about-info">
-        <span class="profile-pic"></span>
-        <div class="bio">
-          <h3 class="text-secondary">BIO</h3>
-          <p>
-            Hi! I'm Srihari Vishnu, and I am currently a first year Software Engineering (BSE)
-            Student at the University of Waterloo. I am a full stack developer with experience in
-            creating Mobile applications, working with Raspberry Pi, and NodeJS. My technical skills
-            include a strong background in the following languages: Kotlin, C++, Java, Python,
-            JavaScript, HTML, CSS. I have experience in using Android Studio, Xcode, Visual Studio
-            Code, and Unity as development platforms. I am familiar with Swift, Tensorflow, and Git.
-            Please feel free to reach out to me at srihari.vishnu@gmail.com for any opportunities or
-            inquiries!
-          </p>
-          <div>
-            <a href="resume.html" class="resume-button">Resume</a>
-          </div>
-        </div>
-        <div id="about-header">Past Work Experience</div>
-        <div class="job job-1">
-          <h3>Kumon inc.</h3>
-          <h6>Math Tutor</h6>
-          <p>
-            Responsibilities of this job include marking booklets, recording results of the
-            students, making sure they complete their corrections, and helping them if they need
-            help working through challenging math problems.
-          </p>
-        </div>
-        <div class="job job-2">
-          <h3>DECA inc.</h3>
-          <h6>Chapter President</h6>
-          <p>
-            President of the DECA business club at Waterloo Collegiate Institute. In charge of
-            organizing the biggest club in the school with a membership of nearly 100 students.
-            Additionally, tasked with leading and coordinating the executive team.
-          </p>
-        </div>
-        <div class="job job-3">
-          <h3>Open Learning Exchange</h3>
-          <h6>Software Engineer Intern</h6>
-          <ul>
-              <li>
-                Worked on an Android application that connects over Bluetooth to a Raspberry Pi
-                running a custom system image 
-              </li>
-              <li>
-                Implemented an SSH Client on an Android phone
-              </li>
-              <li>
-                Implemented a multi-threaded Bluetooth server to communicate and run CLI commands 
-              </li>
-              <li>
-                Used Git as a version control system
-              </li>
-          </ul>
-          </p>
-        </div>
       </div>
-    </main>
+      <div class="job job-3">
+        <h3>Open Learning Exchange</h3>
+        <div class="job-title">Systems Engineer Intern</div>
+        <ul>
+          <li>
+            Rearchitected Bluetooth server to distribute work among processes, increasing throughput by 8x
+          </li>
+          <li>
+            Created UI on Android for managing and monitoring 20+ Docker containers such as Maria DB, NextCloud and
+            Portainer
+          </li>
+          <li>
+            Integrated a functional SSH Client to remotely connect and send commands to SSH servers from a mobile device
+          </li>
+          <li>
+            Redesigned 5+ screens emphasizing on user experience and usability
+          </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </main>
 
-    <footer id="main-footer">Copyright &copy; 2020</footer>
-    <script src="js/menu.js"></script>
-  </body>
+  <footer id="main-footer">Copyright &copy; 2022</footer>
+  <script src="js/menu.js"></script>
+</body>
+
 </html>

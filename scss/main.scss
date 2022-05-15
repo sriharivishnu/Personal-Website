@@ -97,7 +97,7 @@ main {
             .contact {
                 display: inline-block;
                 padding: 1.5rem 3rem;
-                border-radius: 10%;
+                border-radius: 50px;
                 margin-top: 1.5rem;
                 background: $secondary-color;
                 color: black;
@@ -146,7 +146,9 @@ main {
     grid-template-areas: 
     'profile-pic bio bio'
     'head head head'
-    'job1 job2 job3';
+    'job1 job1 job1'
+    'job2 job2 job2'
+    'job3 job3 job3';
     grid-template-columns: repeat(3, 1fr);
 
     .bio {
@@ -160,10 +162,11 @@ main {
         .resume-button {
             padding: 0.7rem 3rem;
             object-position: 50%;
-            background: $secondary-color;
+            background: $primary-color;
             margin-top: 3rem;
+            border: $secondary-color 1px solid;
             font-size: 1.2rem;
-            color: $primary-color;
+            color: white;
             border-radius: 12px;
             @include easeOut;
 
@@ -196,8 +199,10 @@ main {
     }
     
     .job {
+        margin-left: 10vw;
+        margin-right: 10vw;
         background: $tertiary-color;
-        padding: 0.5rem;
+        padding: 1rem;
         border-bottom: $secondary-color 5px solid;
         animation-name: slideFromBottom;
         animation-duration: 1s;
@@ -220,8 +225,12 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.7rem;
+    height: 100%;
     .item {
+        display: flexbox;
+        flex-flow: column;
         padding: 1.5rem;
+        height: 100%;
         background-color: lighten($tertiary-color, 15);
         animation-name: appear;
         animation-duration: 1s;
@@ -230,16 +239,15 @@ main {
         background: darken($primary-color, 5);
         border-top: $secondary-color 5px solid;
         padding: 1.5rem;
+        flex: 0 1 auto;
+        height: 25vh;
+        overflow: scroll;
     }
     img {
         height: 25vw;
         width: 100%;
-        border: 5px darken($primary-color, 10) solid;
-
-        &:hover {
-            opacity: 0.5;
-            border-color: $secondary-color;
-        }
+        border: 5px darken($tertiary-color, 10) solid;
+        cursor: default;
         &.logo {
             padding: 2rem;
             background-color: #f4f4f4;
@@ -319,18 +327,19 @@ main {
 
     input[type="submit"] {
         width: 100%;
-        border:0;
+        border: 1px solid $primary-color;
         padding: 1rem 1.5rem;
         margin-top: 0.5rem;
         font-size: 1rem;
-        background: $secondary-color;
-        text-transform: uppercase;
+        background: $tertiary-color;
+        color: white;
+        @include easeOut;
         
         cursor: pointer;
 
         &:hover {
-            background: $tertiary-color;
-            color: white;
+            background: $secondary-color;
+            color: $primary-color;
         }
     }
 

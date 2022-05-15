@@ -1,4 +1,4 @@
-$primary-color: rgb(47, 52, 73);
+$primary-color: rgb(40, 40, 40);
 $secondary-color: #dfe955;
 $tertiary-color: #52525275;
 $show-home-image: true;
@@ -12,7 +12,7 @@ $background-opacity: 0.7;
 @mixin background {
     @if $show-home-image {
         &#bg-img {
-            background: $home-image;
+            // background: $home-image;
             background-repeat: no-repeat;
             background-size: inherit;
 
